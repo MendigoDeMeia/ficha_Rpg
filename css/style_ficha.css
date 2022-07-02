@@ -1,0 +1,478 @@
+@font-face {
+    font-family: PassportRegular;
+    /*src: url("../rpg-character-sheet/fonts/passport_regular.ttf");*/
+    src: url("fonts/passport_regular.ttf");
+}
+
+@keyframes rollDice {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 35px;
+    text-align: center;
+    color: #900000;
+}
+
+.nome__destaque{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+h3 {
+    margin: 10px 0px 0px;
+}
+
+input:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 70%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personal-details {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px 0px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+input.inputs, select.inputs {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+.character {
+    width: 100%;
+    height: auto;
+
+}
+
+.character-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-image {
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.dice-image {
+    margin-left: 45%;
+    animation: rollDice 3s;
+    width: 20px;
+    margin-top: 1rem;
+    
+}
+
+.bars h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#life-bar, #mana, #occultism-bar {
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 5px;
+}
+
+#life-bar {
+    background-color: rgb(99, 33, 33);
+}
+
+#mana {
+    background-color: rgb(28, 47, 104);
+    width: 100%;
+}
+
+#occultism-bar {
+    background-color: rgb(73, 32, 102);
+}
+
+#actual-life-bar, #actual-mana, #actual-occultism-bar {
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: width 2s;
+}
+
+#actual-life-bar {
+    background-color: rgb(80, 1, 1);
+}
+
+#actual-mana {
+    background-color: rgb(0, 21, 82);
+}
+
+#actual-occultism-bar {
+    background-color: rgb(48, 1, 81);
+}
+
+#life-value, #sanity-value, #occultism-value {
+    width: 100%;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.checkboxes {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.checkboxes div {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxes form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkboxes label {
+    font-size: 13px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after  {
+    display: block;
+}
+
+.checkbox-container .checkmark::after {
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+
+.status {
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.status h4 {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.status input {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.dice-roll {
+    transition: transform 2s;
+}
+
+.dice-roll:hover {
+    transform: rotate(360deg);
+}
+
+.attributes {
+    width: 40%;
+    margin-top: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.attributes-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 20px 20px;
+    margin-top: 15px;
+}
+
+.attribute h3 {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.attribute p {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.attribute .dice-roll {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expertises-test {
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 5%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px 20px 0px 20px;
+}
+
+.expertises {
+    width: 85%;
+    margin-top: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.expertises-container {
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-evenly;
+    grid-gap: 50px 45px;
+    overflow-y: auto;
+}
+
+.expertises-container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.expertises-container::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+}
+
+.expertises-container::-webkit-scrollbar-thumb {
+    background: rgb(161, 161, 161);
+    border-radius: 100px;
+}
+
+.expertises-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 100px;
+}
+
+.expertise {
+    padding: 10px 15px 10px 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.expertise p {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 5px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.expertise h3 {
+    font-size: 12px;
+    text-align: center;
+}
+
+.expertise:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.expertise:hover p{
+    border-bottom: 1px solid black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 250px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: black;
+    margin: auto;
+    padding: 5px 0px 10px 0px;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 35%;
+}
+
+#test-name, #value-title {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+#result-dice {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#result-text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;  
+}
+
+.close {
+    color: rgb(182, 182, 182);
+    float: right;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#value-title {
+    font-size: 18px;
+}
+
+.values-types-title {
+    width: 50%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.div-values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-values input[type=number] {
+    width: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+    border-bottom: 1px solid white;
+}
+
+.div-values button {
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid white;
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    margin-top: 15px;
+    padding: 5px 12px 5px 12px;
+}
+
+.hp{
+    font-size: 16px;
+}
