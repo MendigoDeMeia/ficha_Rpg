@@ -4,15 +4,15 @@ const estatistica = document.querySelectorAll("[data-estatistica]")
 const pecas = {
     "forca": {
         "forca": 5,
-        "defesa": 2,
+        "defesa": 3,
         "hp":5,
-        "agilidade": 1,
+        "agilidade": 2,
         "poder": 0,
         "sorte": 0,
     },
     "defesa": {
-        "forca": 2,
-        "defesa": 5,
+        "forca": 0,
+        "defesa": 10,
         "hp":5,
         "agilidade": 0,
         "poder": 0,
@@ -27,42 +27,41 @@ const pecas = {
         "sorte": 0,
     },
     "agilidade": {
-        "forca": 1,
-        "defesa": 0,
+        "forca": 2,
+        "defesa": 2,
         "hp":1,
         "agilidade": 5,
         "poder": 3,
         "sorte": 5,
     },
     "poder/haki": {
-        "forca": 3,
+        "forca": 0,
         "defesa": 2,
         "hp":2,
         "agilidade": 2,
-        "poder": 5,
+        "poder": 10,
         "sorte": 1,
     },
     "sorte": {
         "forca": 0,
         "defesa": 0,
-        "hp":3,
-        "agilidade": 2,
-        "poder": 1,
-        "sorte": 10,
+        "hp":0,
+        "agilidade": 3,
+        "poder": 2,
+        "sorte": 15,
     },
-
     "forcaN": {
         "forca": -5,
-        "defesa": -2,
+        "defesa": -3,
         "hp":-5,
-        "agilidade": -1,
-        "poder": 0,
-        "sorte": 0,
+        "agilidade": -2,
+        "poder": -0,
+        "sorte": -0,
     },
     "defesaN": {
-        "forca": -2,
-        "defesa": -5,
-        "hp":5,
+        "forca": -0,
+        "defesa": -10,
+        "hp":-5,
         "agilidade": 0,
         "poder": 0,
         "sorte": 0,
@@ -76,29 +75,31 @@ const pecas = {
         "sorte": 0,
     },
     "agilidadeN": {
-        "forca": -1,
-        "defesa": 0,
-        "hp":-1,
+        "forca": -2,
+        "defesa": -2,
+        "hp": -1,
         "agilidade": -5,
         "poder": -3,
         "sorte": -5,
     },
     "poder/hakiN": {
-        "forca": -3,
+        "forca": 0,
         "defesa": -2,
         "hp":-2,
         "agilidade": -2,
-        "poder": -5,
+        "poder": -10,
         "sorte": -1,
     },
     "sorteN": {
         "forca": 0,
         "defesa": 0,
-        "hp":3,
-        "agilidade": 2,
-        "poder": 1,
-        "sorte": 10,
-    }
+        "hp":0,
+        "agilidade": -3,
+        "poder": -2,
+        "sorte": -15,
+    },
+
+    
 
 }
 
@@ -107,21 +108,24 @@ const pecas = {
 controle.forEach((elemento) => {
     elemento.addEventListener('click', (evento) => {
         manipulaDados(evento.target.textContent, evento.target.parentNode)
-
-        atualizaEstatistica(evento.target.dataset.peca)
+        atualizaEstatistica(evento.target.dataset.peca
+            )
     })
 })
 
 function manipulaDados(operacao, controle) {
-    const peca = controle.querySelector("[data-contador")
+    const peca = controle.querySelector("[data-contador]")
+    
+    
+
 
     if (operacao === "-") {
         peca.value = parseInt(peca.value) - 1
-        
 
     }
     else {
         peca.value = parseInt(peca.value) + 1
+
     }
 
 }
@@ -134,6 +138,3 @@ function atualizaEstatistica(peca) {
 }
 
 
-
-
-    

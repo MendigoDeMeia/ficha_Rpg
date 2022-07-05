@@ -31,7 +31,13 @@
         <div class="character">
             <div class="character-header">
                 <img class="character-image" src="images/icaro.jpg" style="width: 30%; height: 30%;">
+                
             </div>
+            <h3 align="center">Level:  <p><script>
+                let level = 2
+            document.write(level)
+            </script>
+            </h3>
             <div><img class="dice-image dice-roll" src="images/dice.png" style="width: 50px; height: 50px;"
                     onclick="openModal('dice')"></div>
             <div class="bars">
@@ -42,11 +48,11 @@
                             </div>
                     </div>
                 </div>
-                <h3>Mana</h3>
+                <h3>Folego</h3>
                 <div class="mana">
                     <div id="mana">
                         <div id="actual-mana">
-                            <p id="sanity-value" onclick="changeModalValue(this)">65/65</p>
+                            <p id="sanity-value" onclick="changeModalValue(this)">3/3</p>
                         </div>
                     </div>
 
@@ -209,6 +215,7 @@
             </div>
             <script src="./js/main.js"></script>
             <script src="./js/script.js"></script>
+            <script src="./js/"></script>
 </body>
 
 </html>
