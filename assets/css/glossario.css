@@ -1,4 +1,27 @@
+.cabecalho{
+    display: flex;
+    justify-content: start;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.menu__retornar{
+    text-decoration: none;
+    color: #101010;
+    text-align: start;
+    font-size: 1rem;
+    margin: 0rem 0rem 0rem 1.3rem 
+
+}
+
+.menu__retornar:hover{
+    color: red;
+}
+
+.menu__retornar:active{
+    color: red;
+}
 .caixa {
+
     align-items: flex-end;
     display: flex;
     justify-content: center;
