@@ -1,0 +1,38 @@
+.opcoes__personagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecao__personagem1{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 1rem; 
+}
+
+.selecao__personagem2{
+    text-decoration: none;
+    color: chartreuse;
+    font-size: 2rem;
+    padding: 1rem; 
+}
+
+.selecao__personagem3{
+    text-decoration: none;
+    color: darkorchid;
+    font-size: 2rem;
+    padding: 1rem; 
+}
+
+
+.selecao__personagem1:active, .selecao__personagem2:active, .selecao__personagem3:active{
+    color: red;
+    font-size: 2.5rem;
+}
+
+.selecao__personagem1:hover, .selecao__personagem2:hover, .selecao__personagem3:hover{
+    color: red;
+    font-size: 2.5rem;
+}

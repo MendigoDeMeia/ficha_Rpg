@@ -18,3 +18,13 @@ li{
 .nome__jogador:active{
     color: #900000;
 }
+
+.glossario{
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.3rem;
+}
+
+.glossario:active{
+    color: red;
+}

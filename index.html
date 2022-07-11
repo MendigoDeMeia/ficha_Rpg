@@ -4,219 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/nome__jogadores.css">
-    <link rel="stylesheet" href="./css/style__atributos.css">
-    <link rel="stylesheet" href="./css/style_ficha.css">
-
+    <link rel="stylesheet" href="./assets/css/style_ficha.css">
+    <link rel="stylesheet" href="./assets/css/selecao__persomagem.css">
     
-    <title>Ficha do Personagem</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The One RPG</title>
 </head>
-
 <body>
-    <header>
-        <nav class="jogadores">
-            <ul class="lista__jogadores">
-                <li><a href="" class="nome__jogador">JOGADOR 1</a></li>
-                <li><a href="" class="nome__jogador">JOGADOR 2</a></li>
-                <li><a href="" class="nome__jogador">JOGADOR 3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="nome">
-        <h1>Tompsom
-            <p class="nome__destaque">Capitão Pequenos Gigantes</p>
-            <p class="nome__destaque">Recompensa:</p>
-            <p class="nome__destaque">$1.000.000.000,01</p>
-        </h1>
-        <div class="character">
-            <div class="character-header">
-                <img class="character-image" src="images/icaro.jpg" style="width: 30%; height: 30%;">
-                
-            </div>
-            <h3 align="center">Level:  <p><script>
-                let level = 2
-            document.write(level)
-            </script>
-            </h3>
-            <div><img class="dice-image dice-roll" src="images/dice.png" style="width: 50px; height: 50px;"
-                    onclick="openModal('dice')"></div>
-            <div class="bars">
-                <h3>Vida</h3>
-                <div id="life-bar">
-                    <div id="actual-life-bar">
-                                <p class="hp" data-estatistica="hp">0</p>
-                            </div>
-                    </div>
-                </div>
-                <h3>Folego</h3>
-                <div class="mana">
-                    <div id="mana">
-                        <div id="actual-mana">
-                            <p id="sanity-value" onclick="changeModalValue(this)">3/3</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="checkboxes">
-                </div>
-
-            </div>
-
-            <div class="status extra-damage">
-                <section class="equipamentos">
-                    <form action="" class="montador">
-                        <div class="box montador-conteudo">
-                            <div class="status">
-                                <label for="" class="status-titulo">FORÇA</label>
-                                <div class="controle">
-                                    <buttom class="controle-ajuste" data-controle="-" data-peca="forcaN">-</buttom>
-                            <input type="text" class="controle-contador" value="00" data-contador>
-                            <buttom class="controle-ajuste" data-controle="+" data-peca="forca">+</buttom>
-                                </div>
-                            </div>
-                            <hr class="linha">
-                            <div class="status">
-                                <label for="" class="status-titulo">DEFESA</label>
-                                <div class="controle">
-                                    <buttom class="controle-ajuste" data-controle="-" data-peca="defesaN">-</buttom>
-                                    <input type="text" class="controle-contador" value="00" data-contador>
-                                    <buttom class="controle-ajuste" data-controle="+" data-peca="defesa">+</buttom>
-                                 </div>
-                            </div>
-                            <hr class="linha">
-                            <div class="status">
-                                <label for="" class="status-titulo">HP</label>
-                                <div class="controle">
-                                    <buttom class="controle-ajuste" data-controle="-" data-peca="hpN">-</buttom>
-                                    <input type="text" class="controle-contador" value="00" data-contador>
-                                    <buttom class="controle-ajuste" data-controle="+" data-peca="hp">+</buttom>
-                                </div>
-                            </div>
-                            <hr class="linha">
-                            <div class="status">
-                                <label for="" class="status-titulo">AGILIDADE</label>
-                                <div class="controle">
-                                    <buttom class="controle-ajuste" data-controle="-" data-peca="agilidadeN">-</buttom>
-                                    <input type="text" class="controle-contador" value="00" data-contador>
-                                    <buttom class="controle-ajuste" data-controle="+" data-peca="agilidade">+</buttom>
-                                </div>
-                            </div>
-                            <hr class="linha">
-                            <div class="status">
-                                <label for="" class="status-titulo">PODER/HAKI</label>
-                                <div class="controle">
-                                    <buttom class="controle-ajuste" data-controle="-" data-peca="poder/hakiN">-</buttom>
-                                    <input type="text" class="controle-contador" value="00" data-contador>
-                                    <buttom class="controle-ajuste" data-controle="+" data-peca="poder/haki">+</buttom>
-                                </div>
-                            </div>
-                            <hr class="linha">
-                            <div class="status">
-                                <label for="" class="status-titulo">SORTE</label>
-                                <div class="controle">
-                                    <buttom class="controle-ajuste" data-controle="-" data-peca="sorteN">-</buttom>
-                                    <input type="text" class="controle-contador" value="00" data-contador>
-                                    <buttom class="controle-ajuste" data-controle="+" data-peca="sorte">+</buttom>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="extra-damage">
-
-                            <h2>STATUS</h2>
-
-                            <section class="box estatisticas">
-                                <div class="estatistica">
-                                    <p class="estatistica-titulo">Dano de atq</p>
-                                    <div class="estatistica-valor">
-                                        <p class="estatistica-numero" data-estatistica="forca">0</p>
-                                    </div>
-                                </div>
-                                <div class="estatistica">
-                                    <p class="estatistica-titulo">Poder Magico</p>
-                                    <div class="estatistica-valor">
-                                        <p class="estatistica-numero" data-estatistica="poder" data-estatisticaN="poder">0</p>
-                                    </div>
-                                </div>
-                                <div class="estatistica">
-                                    <p class="estatistica-titulo">Defesa</p>
-                                    <div class="estatistica-valor">
-                                        <p class="estatistica-numero" data-estatistica="defesa">0</p>
-                                    </div>
-                                </div>
-                                <div class="estatistica">
-                                    <p class="estatistica-titulo">Velocidade</p>
-                                    <div class="estatistica-valor">
-                                        <p class="estatistica-numero" data-estatistica="agilidade">0</p>
-                                    </div>
-                                </div>
-                                <div class="estatistica">
-                                    <p class="estatistica-titulo">Sorte</p>
-                                    <div class="estatistica-valor">
-                                        <p class="estatistica-numero" data-estatistica="sorte">0</p>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-            </div>
-        </div>
-        <div class="flex-container">
-            <div class="personal-details">
-                <h2 class="title">DETALHES PESSOAIS</h2>
-                <div class="inputs">
-                    <h3>Nome</h3>
-                    <input class="inputs" type="text" id="name" name="name" value="Tompsom o Tal do Guela">
-                    <h3>Jogador</h3>
-                    <input class="inputs" type="text" id="player" name="player" value="Thomas">
-                    <h3>Ocupação</h3>
-                    <input class="inputs" type="text" id="ocupation" name="ocupation" value="ADM-DO SERVER">
-                    <h3>Idade</h3>
-                    <input class="inputs" type="text" id="age" name="age" value="27">
-                    <h3>Gênero</h3>
-                    <select class="inputs" id="gender" name="gender">
-                        <option value="male">Masculino</option>
-                        <option value="female">Feminino</option>
-                        <option value="other">Nathan</option>
-                    </select>
-                    <h3>Raça</h3>
-                    <select class="inputs" id="gender" name="gender">
-                        <option value="tipo__raca">Humano</option>
-                        <option value="tipo__raca">Tritão</option>
-                        <option value="tipo__raca">Gigante</option>
-                        <option value="tipo__raca">Skypeano</option>
-                    </select>
-                    <h3>Local de nascimento</h3>
-                    <input class="inputs" type="text" id="birthplace" name="birthplace" value="São Paulo">
-                    <h3>Local de residência</h3>
-                    <input class="inputs" type="text" id="place-residence" name="place-residence" value="São Paulo">
-                </div>
-            </div>
-
-
-            <div class="modal" id="dice-modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('dice')">&times;</span>
-                    <h3 id="test-name"></h3>
-                    <p id="result-dice"></p>
-                    <p id="result-text"></p>
-                </div>
-            </div>
-            <div class="modal" id="value-modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('value')">&times;</span>
-                    <h3 id="value-title"></h3>
-                    <div class="div-values">
-                        <h3 class="values-types-title">Atuais</h3>
-                        <input type="number" id="actual-value" value="0">
-                        <h3 class="values-types-title">Máximos</h3>
-                        <input type="number" id="maximum-value" value="0">
-                        <button onclick="changeValue()">Salvar</button>
-                    </div>
-                </div>
-            </div>
-            <section> FUTURA ATUALIZAÇÃO </section>
-            <script src="./js/main.js"></script>
-            <script src="./js/script.js"></script>
-            <script src="./js/"></script>
+<h1 class="titulo__inicial"> Selecione seu personagem</h1>
+<section>
+    <div class="opcoes__personagem">
+        <a href="./ficha__personagem/ficha_personagem1.html" class="selecao__personagem1">Personagem 1</a>
+        <a href="" class="selecao__personagem2">Personagem 2</a>
+        <a href="" class="selecao__personagem3">Personagem 3</a>
+    </div>
+</section>
+    
 </body>
-
 </html>

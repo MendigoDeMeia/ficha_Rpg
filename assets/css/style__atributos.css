@@ -123,12 +123,12 @@ main {
 .estatistica {
     color: var(--main-branco);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     height: 25%;
 }
 
 .estatistica-titulo {
-    font-size: 1.5em;
+    font-size: 1em;
     border-bottom: 1px solid var(--main-cinza);
     flex-basis: 40%;
     text-transform: uppercase;
@@ -136,7 +136,7 @@ main {
 }
 
 .estatistica-valor {
-    flex-basis: 60%;
+    flex-basis: 40%;
     position: relative;
     margin: 10px 0 0;
     order: 2;
@@ -156,7 +156,7 @@ main {
     top: 50%;
     transform: translateY(-46%);
     width: 100%;
-    line-height: 100%;
+    line-height: 70%;
     text-align: center;
     font-size: 3em;
     margin: 0;
