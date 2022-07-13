@@ -1,45 +1,50 @@
-.container{
+html{
+    background-color: #191919;
+}
+.card__inimigos{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.boss{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
     position: absolute;
-    height: 150px;
-    width: 100px;
+    height: 85%;
+    width: 90%;
     background: #191919;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.container:before, .boss:before{
+.boss:before, .boss:before{
     content:'';
-    width:50px;
-    height:180px;
-    left:30px;
-    top:0px;
+    width:200px;
+    height:200%;
     position:absolute;
     background:linear-gradient(#00e5ff, #b400fb);
-    animation:animate 1s linear infinite;   
+    animation:animate 4s linear infinite;   
 }
 
 @keyframes animate{
-    0% { transform:rotate(-360deg); }
+    0% { transform:rotate(0deg); }
 
     100% { transform:rotate(360deg) }
 }
 
 
-.container:after{
+.boss:after{
     content: '';
     position: absolute;
     background: url(./inimigos/ilha_do_pato/img/cartaz_pinkRaid.jpg);
-    background-size: 90px 140px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     inset: 5px;
     border-radius: 10px;
 }
-
 
 
 
