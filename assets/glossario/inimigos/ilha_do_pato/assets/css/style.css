@@ -1,0 +1,78 @@
+body {
+    background-color: #000000;
+}
+
+h1 {
+    align-items: center;
+    color: #000000;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+.tituloInicial {
+    background-color: white;
+    border: solid;
+    opacity: 80%;
+    text-align: center;
+}
+
+.nome__tripulação {
+    font-size: 1.5rem;
+}
+
+.roteiro {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1.5rem;
+}
+
+.roteiro {
+    width: 100%;
+}
+
+.roteiros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+a {
+    border: 100px;
+}
+
+.botao__forte {
+    color: #ffffff;
+    font-size: 24px;
+    border: 10px solid;
+    padding: 2rem 1rem;
+    min-height: 3em;
+    resize: both;
+    background: rgb(156, 12, 195);
+    width: 100%;
+}
+
+.botao__medio {
+    color: #ffffff;
+    font-size: 24px;
+    border: 10px solid;
+    padding: 2rem 1rem;
+    min-height: 3em;
+    resize: both;
+    background: #2161d1;
+    width: 100%;
+}
+
+.botao__fraco {
+    color: #ffffff;
+    font-size: 24px;
+    border: 10px solid;
+    padding: 2rem 1rem;
+    min-height: 3em;
+    resize: both;
+    background: #22b945;
+    width: 100%;
+}
