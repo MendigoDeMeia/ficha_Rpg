@@ -44,21 +44,44 @@ a {
     border: 100px;
 }
 
-.botao__forte {
+.botao__boss {
     color: #ffffff;
     font-size: 24px;
-    border: 10px solid;
     padding: 2rem 1rem;
     min-height: 3em;
     resize: both;
-    background: rgb(156, 12, 195);
+    width: 100%;
+    background: linear-gradient(100deg, #ee7752, #860ccc, #2161d1, #22b945);
+	background-size: 400% 400%;
+	animation: gradient 2s ease infinite;
+	height: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.botao__forte {
+    color: #ffffff;
+    font-size: 24px;
+    padding: 2rem 1rem;
+    min-height: 3em;
+    resize: both;
+    background: #860ccc;
     width: 100%;
 }
 
 .botao__medio {
     color: #ffffff;
     font-size: 24px;
-    border: 10px solid;
     padding: 2rem 1rem;
     min-height: 3em;
     resize: both;
@@ -69,7 +92,6 @@ a {
 .botao__fraco {
     color: #ffffff;
     font-size: 24px;
-    border: 10px solid;
     padding: 2rem 1rem;
     min-height: 3em;
     resize: both;
