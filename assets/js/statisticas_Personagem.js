@@ -5,7 +5,13 @@ const ficha = {
     "cargo": "Tripulante Daquela Cumbuquinha",
     "recompensa": "$13.000 berry",
     "level": 20,
-    "status": 60
+    "status": 10,
+    "forca": 3,
+    "defesa": 1,
+    "hp": 2,
+    "agilidade": 1,
+    "poder": 0,
+    "sorte": 0
 },
 "Nathan":{
     "nome": "Jack o Caçador",
@@ -33,5 +39,12 @@ const ficha = {
 },
 
 }
+
+
+const jogador1 = document.getElementById('jogador1').innerHTML = ficha.David["nome"];
+const jogador2 = document.getElementById('jogador2').innerHTML = ficha.Nathan["nome"];
+const jogador3 = document.getElementById('jogador3').innerHTML = ficha.batata["nome"];
+const jogador4 = document.getElementById('jogador4').innerHTML = ficha.biel["nome"];
+
 
 
