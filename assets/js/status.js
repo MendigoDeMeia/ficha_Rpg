@@ -115,18 +115,17 @@ controle.forEach((elemento) => {
 
 function manipulaDados(operacao, controle) {
     const peca = controle.querySelector("[data-contador]")
-    //const contador = document.getElementById('contadorPontos1')
-    //const level = document.getElementById('contadorLevel1')
-
+    //let contador = document.getElementById('contadorPontos1')
+    
 
     if (operacao === "-") {
         peca.value = parseInt(peca.value) - 1
-        //contador.value = parseInt(contador.value + 1)
-        //console.log(contador)
+        //contador.value = parseInt(contador.value) + 1
     }
     else {
         peca.value = parseInt(peca.value) + 1
-        //contador.value = parseInt(contador.value - 1)
+        //contador.value = parseInt(contador.value) - 1
+
     }
 
 }

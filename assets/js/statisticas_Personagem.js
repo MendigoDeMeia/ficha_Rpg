@@ -4,14 +4,14 @@ const ficha = {
     "akuma-no-mi": "Oto-Oto no mi",
     "cargo": "Tripulante Daquela Cumbuquinha",
     "recompensa": "$13.000 berry",
-    "level": 20,
-    "status": 60,
-    "forca": 3,
-    "defesa": 1,
-    "hp": 2,
-    "agilidade": 1,
-    "poder": 0,
-    "sorte": 0
+    "level": 10,
+    "status": 30,
+    "forca": 5,
+    "defesa": 5,
+    "hp": 5,
+    "agilidade": 5,
+    "poder": 5,
+    "sorte": 5
 },
 "nathan":{
     "nome": "Jack o Caçador",
@@ -65,6 +65,11 @@ const ficha = {
 }
 
 
+/*
+const players = document.getElementsByClassName("h1");
+console.log(players)
+
+
 //LEVEL
 const level1= document.getElementById('contadorLevel1').value = ficha.david["level"];
 
@@ -80,4 +85,27 @@ const forca4 = document.getElementById('contadorForca4').value = ficha.biel["for
 
 
 
-//
+//DEFESA
+const defesa1 = document.getElementById('contadorDefesa1').value = ficha.david["defesa"];
+const defesa2 = document.getElementById('contadorDefesa2').value = ficha.nathan["defesa"];
+const defesa3 = document.getElementById('contadorDefesa3').value = ficha.batata["defesa"];
+const defesa4 = document.getElementById('contadorDefesa4').value = ficha.biel["defesa"];
+
+//HP
+const hp1 = document.getElementById('contadorHp1').value = ficha.david["hp"];
+const hp2 = document.getElementById('contadorHp2').value = ficha.nathan["hp"];
+const hp3 = document.getElementById('contadorHp3').value = ficha.batata["hp"];
+const hp4 = document.getElementById('contadorHp4').value = ficha.biel["hp"];
+
+//AGILIDADE
+const agilidade1 = document.getElementById('contadorAgilidade1').value = ficha.david["agilidade"];
+const agilidade2 = document.getElementById('contadorAgilidade2').value = ficha.nathan["agilidade"];
+const agilidade3 = document.getElementById('contadorAgilidade3').value = ficha.batata["agilidade"];
+const agilidade4 = document.getElementById('contadorAgilidade4').value = ficha.biel["agilidade"];
+
+//PODER
+
+//SORTE
+
+
+*/
